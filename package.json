@@ -4,7 +4,7 @@
     "description": "Library for parsing PDFs using Mozilla's pdf.js",
     "main": "dist/index.js",
     "repository": {
-        "url": "git+ssh://git@github.com/qnaplus/library-template.git"
+        "url": "git+ssh://git@github.com:Battlesquid/node-pdf-parser.git"
     },
     "author": "Battlesquid <25509915+Battlesquid@users.noreply.github.com>",
     "license": "MIT",
