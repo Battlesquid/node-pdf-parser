@@ -1,7 +1,7 @@
 {
-  "name": "@qnaplus/library-template",
+  "name": "node-pdf-parser",
   "version": "1.0.0",
-  "description": "Template for creating new libraries",
+  "description": "Library for parsing PDFs using Mozilla's pdf.js",
   "main": "dist/index.js",
   "repository": {
     "url": "git+ssh://git@github.com/qnaplus/library-template.git"
@@ -11,16 +11,17 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "build:clean": "yarn clean && yarn build",
+    "build:clean": "pnpm clean && pnpm build",
     "clean": "rimraf dist",
-    "reset": "yarn clean && rimraf node_modules",
+    "reset": "pnpm clean && rimraf node_modules",
     "lint": "eslint src/**",
-    "lint:fix": "yarn lint --fix",
-    "neat": "yarn lint:fix && yarn pretty",
+    "lint:fix": "pnpm lint --fix",
+    "neat": "pnpm lint:fix && pnpm pretty",
     "pretty": "prettier . --write",
     "pretty:check": "prettier . --check"
   },
   "dependencies": {
+    "pdfjs-dist": "^4.10.38",
     "pino": "^9.4.0"
   },
   "devDependencies": {
