@@ -52,13 +52,10 @@ export const parsepdf = async (buffer: ArrayBuffer): Promise<ParsePdfContent> =>
         .fill(0)
         .map(async (_, i) => {
             const page = await document.getPage(i + 1);
-            return {
-                idx: i + 1,
-                text: await render(page)
-            };
+            return render(page);
         });
 
-    const pages = (await Promise.all(tasks)).sort((p1, p2) => p1.idx - p2.idx).map((p) => p.text);
+    const pages = await Promise.all(tasks);
 
     await document.destroy();
 
