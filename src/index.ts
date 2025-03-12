@@ -1,4 +1,5 @@
-import { getDocument, PDFPageProxy } from "pdfjs-dist";
+// @ts-ignore
+import { getDocument, PDFPageProxy } from "pdfjs-dist/legacy/build/pdf.min.mjs";
 import { TextContent, TextItem } from "pdfjs-dist/types/src/display/api";
 import { Metadata } from "pdfjs-dist/types/src/display/metadata";
 
