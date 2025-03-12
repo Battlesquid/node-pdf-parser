@@ -1,5 +1,6 @@
 // @ts-ignore
-import { getDocument, PDFPageProxy } from "pdfjs-dist/legacy/build/pdf.min.mjs";
+import { getDocument, PDFPageProxy } from "pdfjs-dist/legacy/build/pdf.min.js";
+import { PDFDocumentProxy } from "pdfjs-dist";
 import { TextContent, TextItem } from "pdfjs-dist/types/src/display/api";
 import { Metadata } from "pdfjs-dist/types/src/display/metadata";
 
@@ -15,7 +16,7 @@ const isTextItem = (item: Unpacked<TextContent["items"]>): item is TextItem => {
  * @returns The text content of the page
  */
 export const render = async (page: PDFPageProxy): Promise<string> => {
-    const content = await page.getTextContent();
+    const content: TextContent = await page.getTextContent();
     let lastYPosition;
     let text = "";
     for (const item of content.items) {
@@ -46,7 +47,7 @@ export interface ParsePdfContent {
  * @returns The parsed data from the pdf
  */
 export const parsepdf = async (buffer: ArrayBuffer): Promise<ParsePdfContent> => {
-    const document = await getDocument(buffer).promise;
+    const document: PDFDocumentProxy = await getDocument(buffer).promise;
     const { metadata, info } = await document.getMetadata();
 
     const tasks = Array(document.numPages)
