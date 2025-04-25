@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  pdfjs-dist:
+    hash: 9a128089eb39648bfd53b408aa04dbe96a06a88eac05dfaaa22bfb00ceeec34e
+    path: patches/pdfjs-dist.patch
+
 importers:
 
   .:
     dependencies:
       pdfjs-dist:
         specifier: 3.11.174
-        version: 3.11.174
+        version: 3.11.174(patch_hash=9a128089eb39648bfd53b408aa04dbe96a06a88eac05dfaaa22bfb00ceeec34e)
     devDependencies:
       '@eslint/js':
         specifier: ^9.12.0
@@ -2191,7 +2196,7 @@ snapshots:
 
   pathval@2.0.0: {}
 
-  pdfjs-dist@3.11.174:
+  pdfjs-dist@3.11.174(patch_hash=9a128089eb39648bfd53b408aa04dbe96a06a88eac05dfaaa22bfb00ceeec34e):
     optionalDependencies:
       canvas: 2.11.2
       path2d-polyfill: 2.0.1
