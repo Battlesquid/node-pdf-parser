@@ -1,6 +1,6 @@
 {
     "name": "node-pdf-parser",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Library for parsing PDFs using Mozilla's pdf.js",
     "main": "dist/index.js",
     "repository": {
@@ -39,7 +39,8 @@
         "pnpm": "10.6.2"
     },
     "files": [
-        "dist"
+        "dist",
+        "patches"
     ],
     "pnpm": {
         "onlyBuiltDependencies": [
