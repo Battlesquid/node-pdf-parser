@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error no declaration files included
 import { getDocument, PDFPageProxy } from "pdfjs-dist/legacy/build/pdf.min.js";
 import { PDFDocumentProxy } from "pdfjs-dist";
 import { TextContent, TextItem } from "pdfjs-dist/types/src/display/api";
