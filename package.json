@@ -1,6 +1,6 @@
 {
     "name": "node-pdf-parser",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Library for parsing PDFs using Mozilla's pdf.js",
     "main": "dist/index.js",
     "repository": {
@@ -47,6 +47,9 @@
             "canvas",
             "esbuild"
         ],
+        "overrides": {
+            "pdfjs-dist": "3.11.174"
+        },
         "patchedDependencies": {
             "pdfjs-dist": "patches/pdfjs-dist.patch"
         }
